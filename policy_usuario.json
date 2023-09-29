@@ -27,7 +27,7 @@
         "athena:StartQueryExecution",
         "athena:GetQueryExecution",
         "athena:GetQueryResults",
-        "athena:GetWorkGroup"
+        "athena:GetWorkGroup",
         "athena:CreateNamedQuery",
         "athena:GetNamedQuery",
         "athena:StopQueryExecution",
