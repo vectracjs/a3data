@@ -1,6 +1,8 @@
-- Foi criado o usuário user-negocio com permissão de apenas leitura aos buckets:
-teste-camp-brasil/raw
-teste-camp-brasil/gold
+CRIAÇÃO DE USUÁRIOS
+
+- Foi criado o usuário "user-negocio" com permissão de apenas leitura aos buckets:
+  teste-camp-brasil/raw
+  teste-camp-brasil/gold
 
 - Na policy de restrição do usuário, foi necessário dar permissão ao Glue/Athena 
   para acesso às tabelas do catalogo de dados geradas pelo job de ingestão na camada gold
@@ -11,3 +13,12 @@ teste-camp-brasil/gold
 CRIPTOGRAFIA
 
 - Utilizou-se a criptografia KMS para garantir a segurança dos dados pousados nos buckets raw e gold
+
+INGESTÃO DE DADOS
+
+- Foi criado o job GLUE campeonato_brasil, que faz a leitura dos arquivos CSV da raw zone, faz os devidos
+  tratamentos de data types e salva na camada gold para serem consumidos pelo athena que fará as querys
+  necessárias para atender os requisitos solicitados.
+- Criamos uma role específica "glue-role_full" para que o job tenha as permissões que precisa para rodar.
+
+
