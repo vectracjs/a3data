@@ -3,7 +3,8 @@ teste-camp-brasil/raw
 teste-camp-brasil/gold
 
 - Na policy de restrição do usuário, foi necessário dar permissão ao Glue/Athena 
-  para acesso às tabelas do catalogo de dados geradas pelo job de injestão na camada gold
+  para acesso às tabelas do catalogo de dados geradas pelo job de ingestão na camada gold
+  O usuario terá acesso a construir views no athena para fins de facilitar as consultas ad-hoc
   
 - A policy  do usuário está contida no arquivo policy_usuario.json
 
