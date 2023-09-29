@@ -28,7 +28,11 @@
         "athena:GetQueryExecution",
         "athena:GetQueryResults",
         "athena:GetWorkGroup"
-
+        "athena:CreateNamedQuery",
+        "athena:GetNamedQuery",
+        "athena:StopQueryExecution",
+        "athena:ListNamedQueries",
+        "athena:ListQueryExecutions"
       ],
       "Resource": "*"
     },
