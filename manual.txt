@@ -1,7 +1,12 @@
 - Foi criado o usuário user-negocio com permissão de apenas leitura aos buckets:
 teste-camp-brasil/raw
 teste-camp-brasil/gold
+
 - Na policy de restrição do usuário, foi necessário dar permissão ao Glue/Athena 
   para acesso às tabelas do catalogo de dados geradas pelo job de injestão na camada gold
   
 - A policy  do usuário está contida no arquivo policy_usuario.json
+
+CRIPTOGRAFIA
+
+- Utilizou-se a criptografia KMS para garantir a segurança dos dados pousados nos buckets raw e gold
