@@ -1,63 +1,63 @@
 {
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "S3liberar",
-			"Effect": "Allow",
-			"Action": [
-				"s3:*"
-			],
-			"Resource": "*"
-		},
-		{
-			"Sid": "S3ReadOnly",
-			"Effect": "Deny",
-			"Action": [
-				"s3:PutObject"
-			],
-			"Resource": [
-				"arn:aws:s3:::teste-camp-brasil/raw/*",
-				"arn:aws:s3:::teste-camp-brasil/gold/*"
-			]
-		},
-    {
-      "Sid": "AthenaQueryExecute",
-      "Effect": "Allow",
-      "Action": [
-        "athena:StartQueryExecution",
-        "athena:GetQueryExecution",
-        "athena:GetQueryResults",
-        "athena:GetWorkGroup",
-        "athena:CreateNamedQuery",
-        "athena:GetNamedQuery",
-        "athena:StopQueryExecution",
-        "athena:ListNamedQueries",
-        "athena:ListQueryExecutions"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Sid": "Glue",
-      "Effect": "Allow",
-      "Action": [
-        "glue:GetDatabases",
-        "glue:GetTables",
-        "glue:GetTable"
-
-      ],
-      "Resource": "*"
-    },
-	{
-			"Sid": "KMSActions",
-			"Effect": "Allow",
-			"Action": [
-				"kms:Encrypt",
-				"kms:Decrypt",
-				"kms:ReEncrypt*",
-				"kms:GenerateDataKey*",
-				"kms:DescribeKey"
-			],
-			"Resource": "*"
-		}
-	]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3liberar",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3ReadOnly",
+            "Effect": "Deny",
+            "Action": [
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::teste-camp-brasil/raw/*",
+                "arn:aws:s3:::teste-camp-brasil/gold/*"
+            ]
+        },
+        {
+            "Sid": "AthenaQueryExecute",
+            "Effect": "Allow",
+            "Action": [
+                "athena:StartQueryExecution",
+                "athena:GetQueryExecution",
+                "athena:GetQueryResults",
+                "athena:GetWorkGroup",
+                "athena:CreateNamedQuery",
+                "athena:GetNamedQuery",
+                "athena:StopQueryExecution",
+                "athena:ListNamedQueries",
+                "athena:ListQueryExecutions"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Glue",
+            "Effect": "Allow",
+            "Action": [
+                "glue:GetDatabases",
+                "glue:GetTables",
+                "glue:GetTable"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "KMSActions",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Encrypt",
+                "kms:Decrypt",
+                "kms:ReEncrypt*",
+                "kms:GenerateDataKey*",
+                "kms:DescribeKey"
+            ],
+            "Resource": "*"
+        }
+    ]
 }
