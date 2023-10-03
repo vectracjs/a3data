@@ -38,12 +38,23 @@
             "Resource": "*"
         },
         {
+            "Sid": "AthenaBlockDeleteViews",
+            "Effect": "Deny",
+            "Action": [
+                "athena:DeleteNamedQuery",
+                "athena:DeleteWorkGroup"
+            ],
+            "Resource": "*"
+        },
+        {
             "Sid": "Glue",
             "Effect": "Allow",
             "Action": [
                 "glue:GetDatabases",
                 "glue:GetTables",
-                "glue:GetTable"
+                "glue:GetTable",
+                "glue:CreateTables",
+                "glue:CreateTable"
             ],
             "Resource": "*"
         },
