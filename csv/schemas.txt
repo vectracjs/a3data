@@ -1,0 +1,53 @@
+root
+ |-- partida_id: string (nullable = true)
+ |-- rodada: string (nullable = true)
+ |-- clube: string (nullable = true)
+ |-- cartao: string (nullable = true)
+ |-- atleta: string (nullable = true)
+ |-- num_camisa: string (nullable = true)
+ |-- posicao: string (nullable = true)
+ |-- minuto: string (nullable = true)
+
+
+root
+ |-- partida_id: string (nullable = true)
+ |-- rodada: string (nullable = true)
+ |-- clube: string (nullable = true)
+ |-- chutes: string (nullable = true)
+ |-- chutes_no_alvo: string (nullable = true)
+ |-- posse_de_bola: string (nullable = true)
+ |-- passes: string (nullable = true)
+ |-- precisao_passes: string (nullable = true)
+ |-- faltas: string (nullable = true)
+ |-- cartao_amarelo: string (nullable = true)
+ |-- cartao_vermelho: string (nullable = true)
+ |-- impedimentos: string (nullable = true)
+ |-- escanteios: string (nullable = true)
+
+root
+ |-- ID: string (nullable = true)
+ |-- rodada: string (nullable = true)
+ |-- data: string (nullable = true)
+ |-- hora: string (nullable = true)
+ |-- dia: string (nullable = true)
+ |-- mandante: string (nullable = true)
+ |-- visitante: string (nullable = true)
+ |-- formacao_mandante: string (nullable = true)
+ |-- formacao_visitante: string (nullable = true)
+ |-- tecnico_mandante: string (nullable = true)
+ |-- tecnico_visitante: string (nullable = true)
+ |-- vencedor: string (nullable = true)
+ |-- arena: string (nullable = true)
+ |-- mandante_placar: string (nullable = true)
+ |-- visitante_placar: string (nullable = true)
+ |-- mandante_estado: string (nullable = true)
+ |-- visitante_estado: string (nullable = true)
+ |-- estado_vencedor: string (nullable = true)
+
+root
+ |-- partida_id: string (nullable = true)
+ |-- rodada: string (nullable = true)
+ |-- clube: string (nullable = true)
+ |-- atleta: string (nullable = true)
+ |-- minuto: string (nullable = true)
+

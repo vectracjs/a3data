@@ -1,0 +1,43 @@
+1. Em quantas partidas o Palmeiras recebeu cartão amarelo no segundo tempo quando
+jogava como visitante?
+
+select count(distinct a.ID) as palmeiras_cartoes
+from brasileiro_full a
+join cartoes b on a.id = b.partida_id
+where a.visitante = 'Palmeiras'
+and b.cartao='Amarelo'
+and b.minuto > '45'
+and b.clube = 'Palmeiras'
+
+
+2. Qual foi a média de gols do Cruzeiro nas partidas em que venceu jogando fora de
+casa?
+
+with base_dados as (
+Select *
+from gols a
+join brasileiro_full b on a.partida_id = b.id
+where a.clube = 'Cruzeiro'
+and b.arena <> 'mineirao'
+and b.vencedor = 'Cruzeiro'
+and b.visitante = 'Cruzeiro'
+),
+agrupado as (
+ select partida_id, count(partida_id) as total
+  from base_dados
+  group by partida_id
+)
+select avg(total) as media_gols_cruzeiro from agrupado order by 1
+
+
+
+3. Qual foi o clube que teve mais cartões vermelhos quando jogava em casa?
+
+select a.clube, count(1) as cartao_vermelho
+from cartoes a
+join brasileiro_full b on b.ID = a.partida_id
+where a.cartao='Vermelho'
+and a.clube=b.mandante
+group by clube
+order by 2 desc
+limit 1
